@@ -174,7 +174,7 @@ nav a {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 0px;
     position: relative;
     gap: 20px;
     width: 100%;
@@ -186,9 +186,9 @@ nav a {
 }
 
 .course-logo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
+    width: 175px;
+    height: 175px;
+    border-radius: 15px;
 }
 
 /* Контент (заголовок + описание) занимает оставшееся место */
@@ -202,8 +202,8 @@ nav a {
 .course-rating {
     position: absolute;
     top: 10px;
-    right: 10px;
-    width: 80px;
+    right: 40px;
+    width: 110px;
     height: auto;
 }
 
@@ -213,9 +213,9 @@ nav a {
     justify-content: space-between;
     align-items: center;
     background: #f8f8f8;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 14px;
+    padding: 15px;
+    border-radius: 18px;
+    font-size: 20px;
     margin-top: auto; /* Размещаем внизу */
 }
 
@@ -248,16 +248,18 @@ nav a {
     border-radius: 5px;
 }
 .btn1 {
+    background-color: #4CAF50;
     display: inline-block;
     padding: 12px 24px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease;
     text-align: center;
 }
+
 
 .btn1[href='#ALL'] {
     background-color: #4CAF50; /* Зеленый */

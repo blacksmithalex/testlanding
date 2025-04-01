@@ -7,30 +7,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Получаем все курсы
     const mathCourses = document.querySelectorAll(".course-content-math");
     const infoCourses = document.querySelectorAll(".course-content-info");
+   
 
-    function showCourses(mathVisible, infoVisible) {
+    function showCourses(mathVisible, infoVisible, info11Visible, phfVisible, math11Visible) {
         mathCourses.forEach(course => {
             course.closest(".course-card").style.display = mathVisible ? "flex" : "none";
         });
         infoCourses.forEach(course => {
             course.closest(".course-card").style.display = infoVisible ? "flex" : "none";
-        });
+        }) 
     }
 
     // Обработчики событий
     btnMath.addEventListener("click", (e) => {
         e.preventDefault();
-        showCourses(true, false);
+        showCourses(true, false, false);
     });
+    
 
     btnInfo.addEventListener("click", (e) => {
         e.preventDefault();
-        showCourses(false, true);
+        showCourses(false, true, false);
     });
+
 
     btnAll.addEventListener("click", (e) => {
         e.preventDefault();
-        showCourses(true, true);
+        showCourses(true, true, true);
     });
 });
 
