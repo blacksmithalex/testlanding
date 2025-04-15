@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
             if (show) {
                 card.style.display = "flex";
+                card.classList.remove("fade-in"); // сброс, если уже была
+                void card.offsetWidth; // перезапуск
                 card.classList.add("fade-in");
-                setTimeout(() => card.classList.remove("fade-in"), 600);
             } else {
                 card.style.display = "none";
             }
@@ -48,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
         courseCards.forEach((card, index) => {
             if (index < 5) {
                 card.style.display = "flex";
-                card.style.animationDelay = `${index * 120}ms`;
+                card.classList.remove("fade-in"); // сброс
+                void card.offsetWidth; // перезапуск анимации
                 card.classList.add("fade-in");
-                setTimeout(() => card.classList.remove("fade-in"), 1000);
             } else {
                 card.style.display = "none";
             }
@@ -60,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             courseCards[courseCards.length - 1].parentNode.appendChild(showMoreBtn);
         }
     }
+    
     
     
     showMoreBtn.addEventListener("click", () => {
