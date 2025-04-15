@@ -327,6 +327,77 @@ nav a {
 }
 
 
+/* Стили для секции "Ученики поступили в" */
+.university-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .university-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .university-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  
+
+  .university-logos img {
+    max-width: 120px;
+    height: auto; /* это важно — сохраняет пропорции */
+    object-fit: contain; /* полезно, если есть разные форматы */
+    aspect-ratio: auto; /* по умолчанию, можно явно задать если нужно */
+    transition: transform 0.3s;
+  }
+  
+
+  .university-logos img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Стили для блока "В цифрах" */
+  .stats-section {
+    background-color: #ffffff;
+    padding: 40px 20px;
+  }
+  
+  .stats-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .stat-label {
+    font-size: 18px;
+    color: #555;
+  }  
+
+
 
 /* Плавное появление */
 .fade-in {
