@@ -83,7 +83,7 @@ nav a {
     justify-content: space-between;
     align-items: center;
     padding: 50px 0;
-    margin-bottom: -150px; /* Позволяет hero-content заходить на следующий блок */
+    margin-bottom: -100px; /* Позволяет hero-content заходить на следующий блок */
     position: relative;
     z-index: 2; /* Поднимает hero-content выше */
 }
@@ -468,3 +468,384 @@ nav a {
     font-size: 18px;
     color: #333;
 }
+.university-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+}
+
+.university-section h2 {
+    font-size: 36px; /* Сделали больше */
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.frame-caption {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+}
+
+.university-photo-frame {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+    background-color: white;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.university-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.university-logos img {
+    max-width: 110px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.outside-caption {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    margin-top: -10px;
+    position: relative;
+    top: -12px;
+    background: #f9f9f9;
+    display: inline-block;
+    padding: 4px 10
+}
+.university-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+}
+
+.university-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.university-frame-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+}
+
+.frame-caption {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.university-photo-frame {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.university-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.university-logos img {
+    max-width: 110px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.outside-caption {
+    font-style: italic;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+    margin-left: 750px;
+    position: relative;
+    top: -5px;
+    background: #f9f9f9;
+    display: inline-block;
+    padding: 4px 10px;
+}
+
+
+.dashed-wrapper {
+    border: 5px dashed #000000;
+    border-radius: 55px;
+    padding: 55px;
+    background-color: #ffffff;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.stats-inline-block {
+    margin-top: 40px;
+    padding: 0; /* Убираем фон и рамку */
+}
+
+.stats-title {
+    font-size: 36px;
+    text-align: center;
+    margin: 40px 0 30px 0;
+    font-weight: 700;
+    color: #222;
+}
+
+
+.stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.big-number {
+    font-size: 42px;
+    font-weight: 900;
+    color: #4CAF50;
+    margin-bottom: 12px;
+}
+
+.stat-text {
+    font-size: 17px;
+    color: #444;
+}
+.alexey-block {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.alexey-frame {
+    border: none;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.alexey-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.alexey-text {
+    flex: 0 0 150px; /* фикс ширина для заголовка */
+    text-align: left;
+}
+
+.alexey-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.alexey-info {
+    flex: 1;
+    margin-top: -5px;
+    padding-left: 10px;
+}
+
+.alexey-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.alexey-points {
+    list-style: disc inside;
+    font-size: 17px;
+    color: #444;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.alexey-photo {
+    flex: 0 0 280px;
+    max-width: 280px;
+}
+
+.alexey-photo img {
+    width: 100%;
+    border-radius: 12px;
+}
+.alexey-wrapper {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.alexey-block-soft {
+    background-color: white;
+    padding: 40px 30px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.alexey-layout {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.alexey-left-column {
+    flex: 1 1 65%;
+}
+
+.alexey-title-left {
+    font-size: 36px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.alexey-text-content {
+    margin-top: 0;
+}
+
+.alexey-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.alexey-points {
+    list-style: disc inside;
+    padding-left: 0;
+    font-size: 17px;
+    color: #444;
+    margin: 0;
+}
+
+.alexey-photo {
+    flex: 1 1 30%;
+    max-width: 280px;
+    margin-top: 0; /* выравнивание по заголовку */
+}
+
+.alexey-photo img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.alexey-cta-block {
+    background-color: #e6f5ff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+   width: 100%;
+   box-sizing: border-box;
+}
+.alexey-cta-text {
+    font-size: 18px;
+    color: #222;
+    font-weight: 600;
+    flex: 1 1 auto;
+    margin: 0;
+}
+
+.alexey-cta-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+.full-width-cta {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+/* Social media block styles */
+.social-media-block {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-media-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.alexey-layout {
+    display: flex;
+    gap: 40px; /* или сколько тебе нужно */
+  }
+  
+  .alexey-left-column, .alexey-right-column {
+    flex: 1;
+  }
+  
+  .alexey-right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* если хочешь выравнивание по центру */
+  }
+  
