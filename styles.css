@@ -35,6 +35,8 @@ section {
 
 footer {
     padding: 40px 0; /* Было 20px */
+    color: white;
+    background-color: black;
 }
 
 
@@ -123,15 +125,17 @@ nav a {
 .floating-box {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    left: 10px; /* добавляем */
+    right: 10px; /* заменяем width на отступ */
+    
     background: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 14px;
-    opacity: 0; /* Изначально скрыт */
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
-}
+  }
 
 /* Класс для появления текста */
 .floating-box.visible {
@@ -523,7 +527,7 @@ nav a {
     margin-top: -10px;
     position: relative;
     top: -12px;
-    background: #f9f9f9;
+    /* background: #f9f9f9; */
     display: inline-block;
     padding: 4px 10
 }
@@ -594,7 +598,7 @@ nav a {
 
 
 .dashed-wrapper {
-    border: 5px dashed #000000;
+    border: 5px dashed rgba(0, 0, 0, 0.5);
     border-radius: 55px;
     padding: 55px;
     background-color: #ffffff;
@@ -631,7 +635,7 @@ nav a {
 }
 
 .big-number {
-    font-size: 42px;
+    font-size: 75px;
     font-weight: 900;
     color: #4CAF50;
     margin-bottom: 12px;
@@ -779,7 +783,7 @@ nav a {
    box-sizing: border-box;
 }
 .alexey-cta-text {
-    font-size: 18px;
+    font-size: 17px;
     color: #222;
     font-weight: 600;
     flex: 1 1 auto;
