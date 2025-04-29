@@ -150,3 +150,31 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const span = document.getElementById("exam-type");
+    const options = ["ЕГЭ", "ОГЭ"];
+    let index = 0;
+
+    function typeText(text, callback) {
+        span.textContent = "";
+        let i = 0;
+        const interval = setInterval(() => {
+            span.textContent += text[i];
+            i++;
+            if (i >= text.length) {
+                clearInterval(interval);
+                if (callback) setTimeout(callback, 2000); // пауза после появления
+            }
+        }, 100);
+    }
+
+    function loop() {
+        typeText(options[index], () => {
+            index = (index + 1) % options.length;
+            loop();
+        });
+    }
+
+    loop();
+});
