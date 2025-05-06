@@ -178,3 +178,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     loop();
 });
+
+
+  document.getElementById('burger-toggle').addEventListener('click', function () {
+    document.getElementById('main-nav').classList.toggle('open');
+  });
+
+  // Появление header при прокрутке
+  let lastScroll = 0;
+  const header = document.getElementById('site-header');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 200 && currentScroll < lastScroll) {
+      header.classList.remove('hidden');
+      header.classList.add('visible');
+    } else if (currentScroll > 200) {
+      header.classList.remove('visible');
+      header.classList.add('hidden');
+    } else {
+      header.classList.remove('hidden', 'visible');
+    }
+
+    lastScroll = currentScroll;
+  });

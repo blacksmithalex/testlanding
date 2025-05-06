@@ -523,23 +523,26 @@ nav a {
     display: block;
 }
 
-.outside-caption {
-    font-style: italic;
-    font-size: 16px;
-    color: #333;
-    margin-top: -10px;
-    position: relative;
-    top: -12px;
-    /* background: #f9f9f9; */
-    display: inline-block;
-    padding: 4px 10
-}
+  
 .university-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
     position: relative;
 }
+
+
+.university-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #ffffff; /* Можно изменить цвет текста */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для текста */
+    padding: 5px;
+    border-radius: 3px;
+}
+
 
 .university-section h2 {
     font-size: 36px;
@@ -989,6 +992,137 @@ nav a {
     }
 }
 
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 0px;
+    }
+    .hero-content {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 15px;
+    }
+  
+    .hero-image,
+    .hero-text {
+      width: 100%;
+    }
+  
+    .hero-image img {
+      width: 70%;
+      height: auto;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+  
+    .floating-box {
+      width: 65%;
+      margin: -10px auto 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  
+    .hero-main-title {
+      font-size: 22px;
+      line-height: 1.3;
+      text-align: center;
+    }
+  
+    .hero-subtitle,
+    .license {
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    .license {
+      margin-top: 10px;
+    }
+  }
+  
+  
+  /* Базовые стили */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* Бургер по умолчанию скрыт */
+  .burger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .burger {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+  
+    nav.open {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Появление при скролле */
+  header.hidden {
+    transform: translateY(-100%);
+  }
+  
+  header.visible {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  
+  
+  
+  
 
 
 
