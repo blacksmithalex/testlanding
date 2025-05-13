@@ -105,12 +105,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnHighMath.addEventListener("click", (e) => {
         e.preventDefault();
-        showCoursesByRange([[26, 26]]);
+        showCoursesByRange([[26, 33]]);
     });
 
     btnOge.addEventListener("click", (e) => {
         e.preventDefault();
-        showCoursesByRange([[27, 32]]);
+        showCoursesByRange([[34, 39]]);
     });
 
     //  Автозапуск при загрузке
@@ -203,3 +203,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
     lastScroll = currentScroll;
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // === КНОПКА "НАВЕРХ" ===
+    const backToTopBtn = document.getElementById("back-to-top");
+  
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+  
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  
+    // === ПОИСК ПО КУРСАМ ===
+    const input = document.getElementById("courseSearchInput");
+    const courseCards = document.querySelectorAll(".course-card");
+  
+    if (input) {
+      input.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+  
+        courseCards.forEach(card => {
+          const title = card.querySelector("h3")?.textContent.toLowerCase() || "";
+          const desc = card.querySelector("p")?.textContent.toLowerCase() || "";
+  
+          if (title.includes(query) || desc.includes(query)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    }
+  
+    // === ПЛАВНЫЙ СКРОЛЛ ПО МЕНЮ ===
+    const header = document.querySelector("header");
+    const navLinks = document.querySelectorAll('a[data-target]');
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.dataset.target;
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerHeight = header.offsetHeight;
+          const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+  
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+  });
+  window.addEventListener("scroll", function () {
+    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById("scrollProgress").style.width = scrolled + "%";
+  });
+
+function updateDateTime() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const time = now.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  document.getElementById("footer-year").textContent = year;
+  document.getElementById("footer-time").textContent = "Текущее время: " + time;
+}
+
+// Обновляем сразу и потом каждую секунду
+updateDateTime();
+setInterval(updateDateTime, 1000);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("question-form");
+  const success = document.getElementById("q-success");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    // Можно добавить валидацию/отправку позже
+    success.style.display = "block";
+    form.reset();
+    setTimeout(() => {
+      success.style.display = "none";
+    }, 5000);
+  });
+});
+  
+
+
+  
+
+
+
+        
