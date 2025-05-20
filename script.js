@@ -214,6 +214,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         backToTopBtn.style.display = "none";
       }
+      
     });
   
     backToTopBtn.addEventListener("click", function () {
@@ -222,7 +223,16 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth"
       });
     });
-  
+    // Автоматическое скрытие бургер-меню при скролле (на мобильных)
+window.addEventListener("scroll", () => {
+  const nav = document.getElementById("main-nav");
+  const burger = document.getElementById("burger-toggle");
+  if (window.innerWidth <= 768 && nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    // Если нужно, можно также поменять иконку бургера, если она меняется динамически
+  }
+});
+
     // === ПОИСК ПО КУРСАМ ===
     const input = document.getElementById("courseSearchInput");
     const courseCards = document.querySelectorAll(".course-card");
@@ -297,6 +307,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   });
 });
+
+
+
+
+
+
+
+
+
   
 
 

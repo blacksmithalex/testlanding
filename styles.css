@@ -182,9 +182,15 @@ nav a {
   justify-content: center;
 }
 
+.course-search {
+  width: 100%; /* Занимает всю доступную ширину */
+  max-width: 100%; /* Убираем ограничение максимальной ширины */
+  margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
 #courseSearchInput {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   padding: 12px 20px;
   font-size: 16px;
   border-radius: 12px;
@@ -201,9 +207,6 @@ nav a {
     padding: 10px 14px;
   }
 
-  .course-search {
-    padding: 0 10px;
-  }
 }
 
 
