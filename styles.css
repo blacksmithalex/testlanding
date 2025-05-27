@@ -24,6 +24,9 @@ section {
     margin-bottom: -70px; /* Чуть глубже накладываем */
 }
 
+button {
+  outline: none;
+}
 
 
 
@@ -39,7 +42,6 @@ footer {
 header {
     background-color: white; /* светлый фон */
     color: black; /* чёрный текст */
-    padding: 5px 0;
     position: relative;
 }
 
@@ -50,7 +52,7 @@ header .container.header-container {
     width: 90%; /* Чтобы совпадало с .container */
     max-width: 1230px; /* Чтобы точно соответствовало ширине курсов */
     margin: 0 auto;
-    padding: 30px 20px; /* Такой же паддинг как у .container */
+    padding: 15px 20px; /* Такой же паддинг как у .container */
     box-sizing: border-box;
 }
 /* логотип */
