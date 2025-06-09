@@ -290,6 +290,12 @@ function updateDateTime() {
   document.getElementById("footer-time").textContent = "Текущее время: " + time;
 }
 
+document.querySelectorAll("a[href^='http']").forEach(link => {
+  link.setAttribute("target", "_blank");
+  link.setAttribute("rel", "noopener noreferrer");
+});
+
+
 // Обновляем сразу и потом каждую секунду
 updateDateTime();
 setInterval(updateDateTime, 1000);
